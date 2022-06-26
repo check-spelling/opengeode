@@ -1069,7 +1069,7 @@ class SDL_Scene(QGraphicsScene):
 
     def sdl_to_statechart(self, basic=True, view=None, ast=None):
         ''' Create a graphviz representation of the SDL model 
-            Optionally take a QGraphicsView to use as parent for modals '''
+            Optionally take a QGraphicsView to use as parent for models '''
         if ast is None:
             pr_raw = Pr.parse_scene(self)
             pr_data = str('\n'.join(pr_raw))
