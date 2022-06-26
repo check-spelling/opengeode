@@ -1978,10 +1978,10 @@ def _sequence(seq):
     absent_fields = []
     for elem, value in seq.value.items():
         # Set the type of the field - easy thanks to ASN.1 flattened AST
-        delem = elem.replace('_', '-')
+        delim = elem.replace('_', '-')
         found = False
         for each in type_children:
-            if each.lower() == delem.lower():
+            if each.lower() == delim.lower():
                 elem_spec = type_children[each]
                 found = True
                 break
